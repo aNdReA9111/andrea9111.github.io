@@ -17,6 +17,7 @@ function copyFolderSync(from: string, to: string) {
   }
 }
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/aNdReA9111/',
@@ -36,7 +37,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '/src/assets': resolve(__dirname, '.')
+      '/src/assets': resolve(__dirname, '.') 
     }
   }
 })
