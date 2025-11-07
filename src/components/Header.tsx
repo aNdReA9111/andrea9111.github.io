@@ -8,11 +8,11 @@ export function Header() {
   const location = useLocation();
 
   const links = [
-    { label: 'Home', path: '/' },
-    { label: 'CV', path: '/cv' },
-    { label: 'Projects', path: '/projects' },
-    { label: 'Skills', path: '/skills' },
-    { label: 'Contact', path: '/contact' },
+    { label: 'Home', path: '/aNdReA9111/' },
+    { label: 'CV', path: '/aNdReA9111/cv' },
+    { label: 'Projects', path: '/aNdReA9111/projects' },
+    { label: 'Skills', path: '/aNdReA9111/skills' },
+    { label: 'Contact', path: '/aNdReA9111/contact' },
   ];
 
   return (
