@@ -9,7 +9,6 @@ export const skillCategories = [
       'https://img.shields.io/badge/ruby-%23CC342D.svg?style=flat&logo=ruby&logoColor=white',
       'https://img.shields.io/badge/php-%23777BB4.svg?style=flat&logo=php&logoColor=white',
       'https://img.shields.io/badge/shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white',
-      'https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white',
     ],
   },
   {
@@ -18,6 +17,7 @@ export const skillCategories = [
       'https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white',
       'https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white',
       'https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E',
+      'https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white',
       'https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB',
       'https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white',
       'https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=flat&logo=bootstrap&logoColor=white',
@@ -40,7 +40,7 @@ export const skillCategories = [
     ],
   },
   {
-    title: 'Artificial Intelligence',
+    title: 'AI',
     badges: [
       'https://img.shields.io/badge/numpy-%23013243.svg?style=flat&logo=numpy&logoColor=white',
       'https://img.shields.io/badge/SciPy-%230C55A5.svg?style=flat&logo=scipy&logoColor=white',
@@ -53,10 +53,9 @@ export const skillCategories = [
     title: 'Tools',
     badges: [
       'https://img.shields.io/badge/linux-%23FCC624.svg?style=flat&logo=linux&logoColor=black',
+      'https://img.shields.io/badge/Kali_Linux-557C94?style=flat&logo=kali-linux&logoColor=white',
       'https://img.shields.io/badge/postman-FF6C37?style=flat&logo=postman&logoColor=white',
       'https://img.shields.io/badge/Burp_Suite-FF6633?style=flat&logo=burp-suite&logoColor=white',
-      'https://img.shields.io/badge/Kali_Linux-557C94?style=flat&logo=kali-linux&logoColor=white',
-      'https://img.shields.io/badge/notion-%23000000.svg?style=flat&logo=notion&logoColor=white',
     ],
   },
 ];

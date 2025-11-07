@@ -1,4 +1,4 @@
-import { Group, Burger, Drawer, Stack, Button, Text } from '@mantine/core';
+import { Group, Burger, Drawer, Stack, Button, Text, useMantineColorScheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
@@ -6,6 +6,8 @@ import { ThemeToggle } from './ThemeToggle';
 export function Header() {
   const [opened, { toggle, close }] = useDisclosure(false);
   const location = useLocation();
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === 'dark';
 
   const links = [
     { label: 'Home', path: '/aNdReA9111/' },
@@ -18,22 +20,39 @@ export function Header() {
   return (
     <>
       <Group justify="space-between" h="100%" px="md">
-        <Text fw={700} size="lg" c="primary">🚧 Work in Progress 🛠️</Text>
+        <Text fw={700} size="lg" c="primary">
+          🚧 Work in Progress 🛠️
+        </Text>
 
         {/* Desktop Navigation */}
         <Group visibleFrom="sm">
-          {links.map((link) => (
-            <Button
-              key={link.path}
-              component={Link}
-              to={link.path}
-              variant={location.pathname === link.path ? 'filled' : 'subtle'}
-              color={location.pathname === link.path ? 'primary' : 'gray'}
-              size="sm"
-            >
-              {link.label}
-            </Button>
-          ))}
+          {links.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Button
+                key={link.path}
+                component={Link}
+                to={link.path}
+                variant={isActive ? 'filled' : 'subtle'}
+                color={isActive ? (dark ? 'blue' : 'dark') : 'gray'}
+                size="sm"
+                styles={{
+                  root: {
+                    ...(isActive && {
+                      backgroundColor: dark ? '#1c7ed6' : '#e9ecef',
+                      color: dark ? 'white' : 'black',
+                    }),
+                    ...(isActive &&
+                      !dark && {
+                        border: '1px solid #adb5bd',
+                      }),
+                  },
+                }}
+              >
+                {link.label}
+              </Button>
+            );
+          })}
           <ThemeToggle />
         </Group>
 
@@ -44,18 +63,21 @@ export function Header() {
       {/* Drawer per mobile */}
       <Drawer opened={opened} onClose={close} padding="md" size="xs">
         <Stack>
-          {links.map((link) => (
-            <Button
-              key={link.path}
-              component={Link}
-              to={link.path}
-              variant={location.pathname === link.path ? 'filled' : 'light'}
-              color="primary"
-              onClick={close}
-            >
-              {link.label}
-            </Button>
-          ))}
+          {links.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Button
+                key={link.path}
+                component={Link}
+                to={link.path}
+                variant={isActive ? 'filled' : 'light'}
+                color={isActive ? (dark ? 'blue' : 'dark') : 'gray'}
+                onClick={close}
+              >
+                {link.label}
+              </Button>
+            );
+          })}
           <ThemeToggle />
         </Stack>
       </Drawer>

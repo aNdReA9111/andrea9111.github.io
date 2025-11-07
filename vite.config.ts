@@ -26,18 +26,13 @@ export default defineConfig({
     {
       name: 'copy-assets-folder',
       closeBundle() {
-        const srcDir = resolve(__dirname, 'src/assets')
-        const destDir = resolve(__dirname, 'dist/assets')
+        const srcDir = resolve(__dirname, 'public/assets')
+        const destDir = resolve(__dirname, 'public/assets')
         if (fs.existsSync(srcDir)) {
           copyFolderSync(srcDir, destDir)
           console.log('Copiata la cartella assets in dist/')
         }
       },
     },
-  ],
-  resolve: {
-    alias: {
-      '/src/assets/': resolve(__dirname, './') 
-    }
-  }
+  ]
 })
