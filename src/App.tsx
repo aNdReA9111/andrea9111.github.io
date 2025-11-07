@@ -25,11 +25,11 @@ export default function App() {
 
         <AppShell.Main>
           <Routes>
-            <Route path="/aNdReA9111/" element={<Home />} />
-            <Route path="/aNdReA9111/cv" element={<CV />} />
-            <Route path="/aNdReA9111/projects" element={<Projects />} />
-            <Route path="/aNdReA9111/skills" element={<Skills />} />
-            <Route path="/aNdReA9111/contact" element={<Contact />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/cv" element={<CV />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </AppShell.Main>
 

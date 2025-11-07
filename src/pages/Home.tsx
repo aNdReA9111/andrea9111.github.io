@@ -10,8 +10,8 @@ export function Home() {
           <Title order={1}>Hi, I’m Andrea Fiorellino</Title>
           <Text size="lg" c="dimmed">{about.description}</Text>
           <Group mt="md">
-            <Button component={Link} to="/aNdReA9111/projects" size="md">View Projects</Button>
-            <Button component={Link} to="/aNdReA9111/contact" variant="outline" size="md">Contact Me</Button>
+            <Button component={Link} to="/projects" size="md">View Projects</Button>
+            <Button component={Link} to="/contact" variant="outline" size="md">Contact Me</Button>
           </Group>
         </Stack>
         <Image
