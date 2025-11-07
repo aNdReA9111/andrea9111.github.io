@@ -19,7 +19,7 @@ function copyFolderSync(from: string, to: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/aNdReA9111/',
+  base: '/',
   plugins: [
     react(),
     {
