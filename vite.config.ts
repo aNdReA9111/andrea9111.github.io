@@ -20,7 +20,7 @@ function copyFolderSync(from: string, to: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/aNdReA9111/',
+  base: '/',
   plugins: [
     react(),
     {
@@ -30,14 +30,14 @@ export default defineConfig({
         const destDir = resolve(__dirname, 'dist/assets')
         if (fs.existsSync(srcDir)) {
           copyFolderSync(srcDir, destDir)
-          console.log('📁 Copiata la cartella assets in dist/')
+          console.log('Copiata la cartella assets in dist/')
         }
       },
     },
   ],
   resolve: {
     alias: {
-      '/src/assets': resolve(__dirname, '.') 
+      '/src/assets/': resolve(__dirname, './') 
     }
   }
 })
