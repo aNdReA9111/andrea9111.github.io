@@ -1,41 +1,21 @@
-import { createTheme } from "@mantine/core";
-import type { MantineColorsTuple } from "@mantine/core";
+import { createTheme, rem } from '@mantine/core';
 
-// Primary Palette 
-const blueOcean: MantineColorsTuple = [
-  "#e0f7ff",
-  "#b3ecff",
-  "#80dfff",
-  "#4dd2ff",
-  "#1ac6ff",
-  "#00aadd",
-  "#0088aa",
-  "#006688",
-  "#004466",
-  "#002244",
-];
-
-// Secondary Palette
-const warmOrange: MantineColorsTuple = [
-  "#fff3e0",
-  "#ffe0b2",
-  "#ffcc80",
-  "#ffb74d",
-  "#ffa726",
-  "#fb8c00",
-  "#ef6c00",
-  "#e65100",
-  "#bf360c",
-  "#8f2a06",
-];
-
-// Global Theme Definition
-export const theme = createTheme({
-  primaryColor: "blueOcean",
+export const portfolioTheme = createTheme({
+  primaryColor: 'emerald',
   colors: {
-    blueOcean,
-    warmOrange,
+    emerald: [
+      '#ecfdf5', '#d1fae5', '#a7f3d0', '#6ee7b7', '#34d399',
+      '#059669', '#047857', '#065f46', '#064e3b', '#022c22'
+    ],
   },
-  fontFamily: "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
-  defaultRadius: "md",
+  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+  headings: {
+    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
+    fontWeight: '800',
+    sizes: {
+      h1: { fontSize: rem(64), lineHeight: '1.05' },
+      h2: { fontSize: rem(44), lineHeight: '1.1' },
+      h3: { fontSize: rem(24), lineHeight: '1.3' },
+    },
+  },
 });

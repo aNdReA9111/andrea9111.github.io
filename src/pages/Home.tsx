@@ -1,27 +1,31 @@
-import { Container, Title, Text, Group, Button, Image, Stack } from '@mantine/core';
-import { Link } from 'react-router-dom';
-import { about } from '../data/about';
+import { Box, Container } from '@mantine/core';
+import { motion } from 'framer-motion';
+import { FeaturedProjects } from '../components/home/FeaturedProjects';
+import { LandingHero } from '../components/home/LandingHero';
+
+const pageEase = [0.16, 1, 0.3, 1] as const;
 
 export function Home() {
   return (
-    <Container py="xl">
-      <Group justify="space-between" align="center" wrap="wrap">
-        <Stack flex={1} gap="md">
-          <Title order={1}>Hi, I’m Andrea Fiorellino</Title>
-          <Text size="lg" c="dimmed">{about.description}</Text>
-          <Group mt="md">
-            <Button component={Link} to="/projects" size="md">View Projects</Button>
-            <Button component={Link} to="/contact" variant="outline" size="md">Contact Me</Button>
-          </Group>
-        </Stack>
-        <Image
-          src={about.profileImage}
-          alt="Profile"
-          radius="xl"
-          w={{ base: '100%', sm: 280 }}
-          mt={{ base: 'md', sm: 0 }}
-        />
-      </Group>
-    </Container>
+    <Box>
+      <Box
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background:
+            'radial-gradient(circle at 15% 10%, rgba(5,150,105,0.12), transparent 22%), radial-gradient(circle at 85% 18%, rgba(14,165,233,0.1), transparent 20%)',
+          pointerEvents: 'none',
+        }}
+      />
+
+      <Container size="lg" py={{ base: '3rem', md: '5rem' }} style={{ position: 'relative', zIndex: 1 }}>
+        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: pageEase }}>
+          <LandingHero />
+        </motion.div>
+
+        <FeaturedProjects />
+      </Container>
+    </Box>
   );
 }
