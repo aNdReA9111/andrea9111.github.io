@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -b gh-pages -d dist"
   },
   "dependencies": {
     "@mantine/core": "^9.4.1",
